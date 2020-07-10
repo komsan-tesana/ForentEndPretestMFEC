@@ -1,0 +1,103 @@
+<div *ngIf="Status == 1">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+   
+    <form class="form-inline my-2 my-lg-0">
+    
+      <a class="nav-link active " type="submit" data-toggle="modal" data-target="#exampleModal">Profile</a>
+    </form>
+   
+    <a class="nav-link active " href="">Logout</a>
+  </nav>
+
+</div>
+
+  <router-outlet></router-outlet>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-5">❋PRE TEST MFEC
+    <h6> Mr.Komsan Tesana</h6>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+<!-- Modal Profile-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       
+        
+        <div class="card bg-light mb-3" style="max-width: auto;">
+          <div class="card-header text-center"><h1>Profile Detail</h1></div>
+          <div class="card-body">
+            
+             
+        
+                   <div class="form-group">
+                      <label>Name</label>
+                      <input data-dismiss="name" type="text" class="form-control " id="name" name="name"  [(ngModel)] = "MyUser.name" disabled #name >
+                     
+                    </div>
+                  
+                  <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" id="username" name="username" [(ngModel)] = "MyUser.username" disabled >
+                  </div>
+          
+                  <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" class="form-control" id="password" name="password" [(ngModel)] = "MyUser.password" disabled >
+                    </div>
+           
+                    
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" class="form-control" id="email" name="email" [(ngModel)] = "MyUser.email" disabled #email>
+                    </div>
+                  <div class="form-group">
+                    <label>Address</label>
+                    <textarea class="form-control" id="address" name="address" rows="3" [(ngModel)] = "MyUser.address" disabled #address></textarea>
+                  </div>
+                
+                  <button (click)="removeDisabled(name,email,address)" class="btn btn-primary btn-lg btn-block" >Edit</button>
+              
+          </div>
+  
+       
+        </div>
+
+     
+
+       
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" (click)="saveEdit()"  data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

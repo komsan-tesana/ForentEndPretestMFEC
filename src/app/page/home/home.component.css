@@ -1,0 +1,37 @@
+.intro-header {
+    height: unset !important;
+  }
+  .intro-2 {
+    background: url("https://www.img.in.th/images/f582109859553a824f257fb76e2f2154.jpg")no-repeat center center;
+    background-size: cover;
+  }
+  .view {
+   height: 100vh !important;
+  }
+  .btn .fa {
+    margin-left: 3px;
+  }
+  .top-nav-collapse {
+    background-color: #424f95 !important;
+  }
+ 
+  h6 {
+    line-height: 2;
+  }
+  .rgba-gradient .full-bg-img {
+    background: linear-gradient(45deg, #e1dcd9, rgba(29, 210, 177, 0.6) 200%);
+  }
+  h1{
+      padding-top: 2cm;
+      font-size: 100px;
+  }
+  .marginright{
+
+   margin-right: 750px;
+   margin-bottom: 50px;
+
+  }
+
+ 
+  
+  
